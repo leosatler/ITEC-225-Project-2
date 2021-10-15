@@ -108,14 +108,16 @@ morse = function cmc2c() {
     "|": " ",
     " ": "",
   };
-  let txt = document.getElementById("input").value;
-  let txt2 = txt.split();
+  let txt = document.getElementById("input").value.toString();
+  let txt2 = txt.split("");
   let ans = "";
   for (let i = 0; i < txt2.length; i++) {
-    ans += mc2c[txt2[i]] + " ";
+    ans += mc2c[charAt(i)] + " ";
   }
-  document.getElementById("output").value = ans.toString();
-};
+  document.getElementById("output").value= ans;
+// I dont understand what's happening with this function it was working
+// Now it's not working at all
+}
 
 function erase(){
     document.getElementById("input").value = "";
